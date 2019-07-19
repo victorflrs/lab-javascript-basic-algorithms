@@ -1,25 +1,25 @@
 // Names and Input
 var hacker1 = "Pancho";
-console.log (hacker1);
+console.log(hacker1);
 
 var hacker2 = prompt("Please enter the navigator's name");
-console.log ("The navigator's name is", hacker2);
+console.log("The navigator's name is", hacker2);
 
 var hacker1Length = hacker1.length;
 var hacker2Length = hacker2.length;
 
 //Conditionals
 
-if (hacker1Length > hacker2Length ){
-    console.log ("The Driver has the longest name, it has", hacker1Length, "characters")
-  }
-    else if (hacker2Length > hacker1Length) {
-      console.log ("Yo, navigator got the longest name, it has ", hacker2Length, "characters")
-    }
-  
-  else {
-    console.log("wow, you both got equally long names,", hacker1Length, "characters!!")
-  }
+if (hacker1Length > hacker2Length) {
+  console.log("The Driver has the longest name, it has", hacker1Length, "characters")
+}
+else if (hacker2Length > hacker1Length) {
+  console.log("Yo, navigator got the longest name, it has ", hacker2Length, "characters")
+}
+
+else {
+  console.log("wow, you both got equally long names,", hacker1Length, "characters!!")
+}
 
 //Loops
 
@@ -30,19 +30,21 @@ navCaps = hacker2.toUpperCase().split("").join(" ");
 console.log("\n The Navigator's name in reverse is", navRev);
 console.log("\n The Navigator's name is spelled", navCaps)
 
-if(hacker1.localeCompare(hacker2)===-1){
-console.log("\n The driver's name goes first")
-} 
-else if(hacker1.localeCompare(hacker2)===1){
+if (hacker1.localeCompare(hacker2) === -1) {
+  console.log("\n The driver's name goes first")
+}
+else if (hacker1.localeCompare(hacker2) === 1) {
   console.log("\n Yo, the navigator goes first definitely")
 }
-else if(hacker1.localeCompare(hacker2)===0){
+else if (hacker1.localeCompare(hacker2) === 0) {
   console.log("\n What?! You both got the same name?")
 }
 
 // Palindrome Checker
 
 var palindromo = prompt("Please enter a palindrome");
+
+var palindromo = palindromo.split(" ").join("")
 
 var revPal = palindromo.split("").reverse().join("");
 
@@ -59,10 +61,10 @@ var revPal = palindromo.split("").reverse().join("");
 
 switch (palindromo) {
   case revPal:
-  console.log("its a palindrome");
-  break;
+    console.log("its a palindrome");
+    break;
   default:
-  console.log("not a palindrome");
+    console.log("not a palindrome");
 }
 
 
@@ -82,9 +84,9 @@ var count = (loremIpsum.match(/ et /g) || []).length;
 
 
 if (confirm('want to create a 3 paragraph lorem ipsum?')) {
-    console.log('\n', loremIpsum);
-    console.log('\n','\n',"Generated", paragraphsInTheString,  "paragraphs,", words, "words, 2002 bytes of Lorem Ipsum");
-    console.log('\n', "latin word et appears", count, "times")
+  console.log('\n', loremIpsum);
+  console.log('\n', '\n', "Generated", paragraphsInTheString, "paragraphs,", words, "words, 2002 bytes of Lorem Ipsum");
+  console.log('\n', "latin word et appears", count, "times")
 } else {
-    console.log("bye bye")
+  console.log("bye bye")
 }
